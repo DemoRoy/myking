@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<title>WCJ is Roy'King</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div id="hero-beginning-animations">
+		<div class="types">
+			<span class="wcj">我</span>
+			<span class="wcj">家</span>
+			<span class="wcj">婵</span>
+			<span class="wcj">娟</span>
+			<span class="wcj">是</span>
+			<span class="wcj">个</span>
+			<span class="wcj">大</span>
+			<span class="wcj">娘</span>
+			<span class="wcj">儿</span>
+			<span class="wcj">们</span>
+			<span class="wcj">儿</span>
+			<span class="wcj">。</span>
+			<span class="wcj">。</span>
+			<span class="wcj">。</span>
+			<span class="king">王</span>
+			<span class="king">！</span>
+			<span class="king">她</span>
+			<span class="king">是</span>
+			<span class="king">王</span>
+			<span class="king">！</span>
+			<span class="king">！</span>
+			<span class="king">！</span>
+			<span class="cursor">|</span>
+		</div>
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script>
+		$(window).bind('load',function(){
+			for (var i = 0;i <= 14;i++ ) {
+				$('#hero-beginning-animations .types').children('.wcj:eq(' + i + ')').delay(100 * i).fadeIn(50);
+			};
+			setTimeout(function(){
+				var count = 1;
+				for (var j = 14;j >= 5;j--) {
+					$('#hero-beginning-animations .types').children('.wcj:eq(' + j + ')').delay(100 * count).fadeOut(50);
+					count++;
+				}
+			},2000);
+			setTimeout(function(){
+				for (var k = 0;k <= 8;k++) {
+					$('#hero-beginning-animations .types').children('.king:eq(' + k + ')').delay(100 * k).fadeIn(50);
+				}
+			},6000);
+		})
+				
+
+	</script>
+</body>
+</html>
